@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find doctors - Liberty Health Care</title>
+  <meta name="description" content="Search hospital and private-chamber doctors by specialty and place, and compare fees and availability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/shared/tailwind.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="app-main" class="pb-28">
+    <section class="mx-auto max-w-5xl px-4 pt-8 sm:px-6">
+      <nav class="mb-3 text-body-sm text-on-surface-variant" aria-label="Breadcrumb"><a href="/frontend/patient/index.html" class="hover:underline">Home</a> <span aria-hidden="true">/</span> <span class="font-semibold text-on-surface">Find doctors</span></nav>
+      <h1 id="title" class="font-display text-headline-lg-mobile sm:text-headline-lg">Find doctors</h1>
+      <p id="summary" class="mt-1 text-body-md text-on-surface-variant" aria-live="polite">&nbsp;</p>
+
+      <form id="filters" class="card mt-6 space-y-4 p-4 sm:p-5" role="search" aria-label="Filter doctors">
+        <div class="flex items-center gap-2 rounded-xl bg-surface-container-low px-3">
+          <span class="material-symbols-outlined text-outline" aria-hidden="true">search</span>
+          <label class="sr-only" for="f-q">Search by doctor, hospital or specialty</label>
+          <input id="f-q" type="search" maxlength="100" placeholder="Search by doctor, hospital or specialty" class="w-full bg-transparent py-3 text-body-md outline-none placeholder:text-outline">
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div><label class="field-label" for="f-specialty">Specialty</label><select id="f-specialty" class="field-input"><option value="">All specialties</option></select></div>
+          <div><label class="field-label" for="f-state">State</label><select id="f-state" class="field-input"><option value="">All states</option></select></div>
+          <div><label class="field-label" for="f-district">District</label><select id="f-district" class="field-input" disabled><option value="">All districts</option></select></div>
+          <div><label class="field-label" for="f-sort">Sort by</label>
+            <select id="f-sort" class="field-input">
+              <option value="soonest">Earliest available</option>
+              <option value="fee_low">Fee: low to high</option>
+              <option value="fee_high">Fee: high to low</option>
+              <option value="name">Name</option>
+            </select></div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="seg-tabs grid-cols-3 sm:w-96" role="tablist" aria-label="Type of doctor">
+            <button type="button" role="tab" data-type="" class="seg-tab" aria-selected="true">All</button>
+            <button type="button" role="tab" data-type="HOSPITAL" class="seg-tab" aria-selected="false">Hospital</button>
+            <button type="button" role="tab" data-type="PRIVATE" class="seg-tab" aria-selected="false">Private chamber</button>
+          </div>
+          <button type="button" id="reset" class="btn-outline btn-sm">Reset filters</button>
+        </div>
+      </form>
+
+      <div id="results" class="mt-6 space-y-4" aria-live="polite" aria-busy="true"></div>
+      <nav id="pager" class="mt-6 flex items-center justify-center gap-3" aria-label="Pages" hidden></nav>
+    </section>
+  </main>
+
+  <!-- Compare tray -->
+  <div id="tray" hidden class="fixed inset-x-0 bottom-0 z-40 border-t border-outline-variant bg-surface-container-lowest/95 shadow-pop backdrop-blur">
+    <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
+      <p class="font-display text-label-lg">Compare <span id="tray-count" class="text-primary">0</span>/4</p>
+      <div id="tray-chips" class="flex min-w-0 flex-1 flex-wrap gap-2"></div>
+      <button type="button" id="tray-clear" class="btn-outline btn-sm">Clear</button>
+      <a id="tray-go" href="#" class="btn-primary btn-sm" aria-disabled="true">Compare</a>
+    </div>
+  </div>
+
+  <div id="app-footer"></div>
+  <script type="module" src="/frontend/patient/doctors.js"></script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#005c55", "surface-container-highest": "#dae2fd", "error-container": "#ffdad6", "secondary-container": "#fe932c", "on-tertiary-fixed": "#002113", "on-error": "#ffffff", "surface-container-low": "#f2f3ff", "secondary-fixed": "#ffdcc3", "tertiary-fixed-dim": "#4edea3", "on-surface": "#131b2e", "primary-fixed": "#9cf2e8", "primary-container": "#0f766e", "inverse-on-surface": "#eef0ff", "on-primary-container": "#a3faef", "secondary-fixed-dim": "#ffb77d", "surface-dim": "#d2d9f4", "on-surface-variant": "#3e4947", "inverse-surface": "#283044", "background": "#faf8ff", "on-primary": "#ffffff", "surface-container": "#eaedff", "on-secondary-container": "#663500", "tertiary-fixed": "#6ffbbe", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-secondary-fixed": "#2f1500", "surface": "#faf8ff", "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#00504a", "surface-container-high": "#e2e7ff", "primary-fixed-dim": "#80d5cb", "secondary": "#904d00", "outline-variant": "#bdc9c6", "on-secondary": "#ffffff", "surface-tint": "#006a63", "inverse-primary": "#80d5cb", "on-tertiary-fixed-variant": "#005236", "outline": "#6e7977", "on-tertiary-container": "#99ffcd", "on-error-container": "#93000a", "on-primary-fixed": "#00201d", "on-background": "#131b2e", "surface-container-lowest": "#ffffff", "surface-variant": "#dae2fd", "tertiary-container": "#007952", "on-secondary-fixed-variant": "#6e3900", "tertiary": "#005e3f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "gutter": "1rem", "margin-desktop": "2.5rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-xl": "2.5rem", "margin": "1rem", "space-md": "1rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "display-lg-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "display-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-3 bg-surface-container-low"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight leading-tight">Arogya Sanjeevani</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">National Registry Empanelment</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs mb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Facility Operations</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard Overview</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="doctors-roster" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">stethoscope</span><span class="font-label-lg text-label-lg">Doctors</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface">Active</span></a><a class="flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clinical-departments" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span class="font-label-lg text-label-lg">Departments</span></a><a class="flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="opd-fee-schedules" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-lg text-label-lg">OPD Fees</span></a><a class="flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="bed-inventory-count" href="#"><span class="material-symbols-outlined text-[20px]">bed</span><span class="font-label-lg text-label-lg">Bed Count</span></a><a class="flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facilities-and-amenities" href="#"><span class="material-symbols-outlined text-[20px]">medical_services</span><span class="font-label-lg text-label-lg">Facilities &amp; Amenities</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pm-jay-claims-and-insurance" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Billing &amp; Insurance</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">PM-JAY</span></a><a class="flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hims-integration-settings" href="#"><span class="material-symbols-outlined text-[20px]">replace_audio</span><span class="font-label-lg text-label-lg">HIMS Settings</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container"><div class="flex items-center justify-between mb-2"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">ABDM Protocol</span><span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-container text-on-tertiary-container font-semibold">Live V2.1</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Health records syncing uninterrupted via NHA Gateway M1-M3.</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-3 px-3 py-2 rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">domain</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-label-lg text-label-lg text-on-surface font-bold">Manipal Hospital</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer">arrow_drop_down</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">Old Airport Road, Bengaluru</span></div></div><div class="hidden xl:flex items-center gap-4 px-3 py-1.5 rounded-xl bg-surface-container-low"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">ROHINI / NHA ID</span><span class="font-label-md text-label-md text-on-surface font-semibold">#KA-BLR-HOSP-0814</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span><span class="font-label-md text-label-md text-tertiary font-bold">ABDM Registry Active</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><button class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[18px]">person_add</span><span>Add Doctor</span></button><button class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[18px]">accessible_forward</span><span>Admit Patient</span></button><button class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px] text-primary">sync</span><span>Sync HIMS</span></button></div><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">4</span></div><div class="h-8 w-px bg-outline-variant"></div><div class="flex items-center gap-3 pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Suresh Menon</span><span class="font-label-sm text-label-sm text-on-surface-variant">Operations Director</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<div class="px-space-md lg:px-space-xl py-6 space-y-6">
+<!-- HOSPITAL METADATA & QUICK METRIC BANNER -->
+<div class="rounded-xl bg-surface-container-lowest p-5 lg:p-6 shadow-[0_1px_3px_0_rgba(15,23,42,0.04),0_4px_12px_-2px_rgba(15,118,110,0.05)]">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4 pb-5 border-b border-surface-container">
+<div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[28px]">local_hospital</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Manipal Hospital — Main Campus (HAL Old Airport Road)</h1>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> NABH Accredited
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">shield</span> PM-JAY Empanelled
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-3 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>ABDM Facility ID: <strong class="text-on-surface font-semibold">IN-KA-BLR-004821</strong></span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Rohini ID: <strong class="text-on-surface font-semibold">ROH-BLR-89201</strong></span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-tertiary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> HIMS Gateway Live
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start xl:self-auto shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Monthly MoHFW Report</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary-container text-on-primary-container hover:opacity-95 font-label-md text-label-md transition-opacity shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Broadcast ABHA Registry</span>
+</button>
+</div>
+</div>
+<!-- Quick KPI Tiles -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-5">
+<!-- Tile 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Empanelled Clinicians</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">clinical_notes</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold">48</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Active Today</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface font-medium">+3</span>
+<span>consultants on roster leave</span>
+</div>
+</div>
+<!-- Tile 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Bed Occupancy Rate</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold">84%</span>
+<span class="font-label-md text-label-md text-error font-semibold">Peak Surge</span>
+</div>
+<div class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">420</span> occupied of <span class="font-semibold text-on-surface">500</span> total licensed beds
+          </div>
+</div>
+<!-- Tile 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Today's OPD Footfall</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold">382</span>
+<span class="font-label-md text-label-md text-secondary font-bold">₹3.05L OPD Rev</span>
+</div>
+<div class="mt-2 flex items-center gap-1 font-body-sm text-body-sm text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+14.2% vs yesterday (Morning rush)</span>
+</div>
+</div>
+<!-- Tile 4 -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">HIMS Integration Sync</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">sync_saved_locally</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> Live Active
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">60s Polling</span>
+</div>
+<div class="mt-2 font-body-sm text-body-sm text-on-surface-variant truncate">
+            Epic &amp; Cerner HL7 v2.5 / FHIR R4 synchronized
+          </div>
+</div>
+</div>
+</div>
+<!-- MAIN TWO-COLUMN SECTION: BED CAPACITY (LEFT) & AMENITIES CHECKLIST (RIGHT) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Bed Capacity & Ward Inventory (7 Cols) -->
+<div class="lg:col-span-7 rounded-xl bg-surface-container-lowest p-5 lg:p-6 shadow-[0_1px_3px_0_rgba(15,23,42,0.04),0_4px_12px_-2px_rgba(15,118,110,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">hotel</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Live Bed Capacity &amp; Ward Inventory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Integrated census reflecting real-time discharges &amp; triages</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>MoHFW Census</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Update Bed Status</span>
+</button>
+</div>
+</div>
+<!-- Highlight Figures -->
+<div class="grid grid-cols-3 gap-3 my-5 p-4 rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Total Licensed</span>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold mt-0.5">500 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Beds</span></span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high pl-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Currently Occupied</span>
+<span class="font-headline-md text-headline-md text-primary font-extrabold mt-0.5">420 <span class="font-body-sm text-body-sm font-semibold text-secondary-container">84%</span></span>
+</div>
+<div class="flex flex-col border-l border-surface-container-high pl-4">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-semibold">Vacant / Available</span>
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold mt-0.5">80 <span class="font-body-sm text-body-sm font-normal text-tertiary">Immediate</span></span>
+</div>
+</div>
+<!-- Master Progress Bar -->
+<div class="space-y-1.5 mb-6">
+<div class="flex items-center justify-between font-label-sm text-label-sm font-semibold">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+                Occupied: 420 (84%)
+              </span>
+<span class="text-tertiary flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+                Available: 80 (16%)
+              </span>
+</div>
+<div class="w-full h-3.5 rounded-full bg-surface-container-high overflow-hidden flex p-0.5">
+<div class="h-full rounded-l-full bg-primary-container transition-all duration-500" style="width: 84%"></div>
+<div class="h-full rounded-r-full bg-tertiary-fixed-dim transition-all duration-500" style="width: 16%"></div>
+</div>
+</div>
+<!-- Sub-Ward Breakdown -->
+<div class="space-y-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Sub-Ward Allocation &amp; Safety Tiers</span>
+<!-- ICU -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-error-container/40 text-error flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">vital_signs</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">ICU &amp; Critical Care</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Critical (87.5%)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Level 3 Trauma ICU, CCU &amp; Pediatric NICU</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-auto">
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">42 / 48 Occupied</div>
+<div class="font-label-sm text-label-sm text-error font-semibold">6 Beds Available</div>
+</div>
+<div class="w-20 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 87.5%"></div>
+</div>
+</div>
+</div>
+<!-- General Male Ward -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">man</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">General Male Ward (Ward 3 &amp; 4)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">High (90.6%)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Post-op general surgery &amp; nephro recovery</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-auto">
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">145 / 160 Occupied</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">15 Beds Available</div>
+</div>
+<div class="w-20 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 90.6%"></div>
+</div>
+</div>
+</div>
+<!-- General Female Ward -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">woman</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">General Female Ward (Ward 5 &amp; 6)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">High (92.1%)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Maternity wing, ortho &amp; cardiology stepdown</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-auto">
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">152 / 165 Occupied</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">13 Beds Available</div>
+</div>
+<div class="w-20 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 92.1%"></div>
+</div>
+</div>
+</div>
+<!-- Private / Semi-Private -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Private &amp; Semi-Private Suites</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-semibold">Moderate (63.7%)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tower B - Floors 4-7 Deluxe &amp; Executive wings</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-auto">
+<div class="text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">81 / 127 Occupied</div>
+<div class="font-label-sm text-label-sm text-tertiary font-bold">46 Beds Available</div>
+</div>
+<div class="w-20 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 63.7%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Facilities & Amenities Checklist (5 Cols) -->
+<div class="lg:col-span-5 rounded-xl bg-surface-container-lowest p-5 lg:p-6 shadow-[0_1px_3px_0_rgba(15,23,42,0.04),0_4px_12px_-2px_rgba(15,118,110,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Facilities &amp; Amenities</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live feeds to Arogya Sanjeevani Discovery &amp; ABHA</p>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> 10/10 Live
+            </span>
+</div>
+<!-- Interactive Toggle Checklist Items -->
+<div class="divide-y divide-surface-container mt-2 max-h-[460px] overflow-y-auto pr-1">
+<!-- Item 1 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">emergency</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">24/7 Emergency &amp; Trauma Care</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Level-1 designated resuscitation bays</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">monitor_heart</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Intensive Care Unit (ICU / NICU)</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous hemodynamic monitoring</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">medication</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">24/7 In-House Pharmacy</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Click &amp; Collect integrated with Jan Aushadhi</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-secondary shrink-0">verified_user</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Ayushman Bharat (PM-JAY) TPA Desk</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct pre-auth kiosk at reception Counter 2</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">PM-JAY</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">local_parking</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Multi-Level Basement Parking</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">320 slots with Valet &amp; EV fast chargers</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">ambulance</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">ACLS Ambulance Fleet</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 Units active with ventilator &amp; GPS tracker</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">4 Ready</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">water_drop</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Dialysis Unit &amp; Nephrology Care</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">16 stations, isolated seropositive stations</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 8 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">radiology</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Diagnostic Imaging (128-Slice CT, 3T MRI)</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PACS connected DICOM server online</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 9 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">accessible</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Wheelchair Transit &amp; Specially-Abled</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Braille signage &amp; ramp gradients compliant</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Item 10 -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">bloodtype</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Blood Bank &amp; Component Separation</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PRP, Cryo, Platelet Apheresis licensed</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 mt-3 border-t border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+            Last verified: <strong>Today at 09:15 AM</strong>
+</span>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors shadow-sm self-end sm:self-auto" type="button">
+            Save Amenities Changes
+          </button>
+</div>
+</div>
+</div>
+<!-- CENTERPIECE: DOCTOR ROSTER TABLE -->
+<div class="rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.04),0_4px_12px_-2px_rgba(15,118,110,0.05)] overflow-hidden">
+<!-- Header & Filtering Control Bar -->
+<div class="p-5 lg:p-6 border-b border-surface-container flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">stethoscope</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Empanelled Clinicians &amp; OPD Fee Schedules</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">48 Registered</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live fee schedules synchronizing directly with citizen discovery apps &amp; ABHA portal</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+<span>Bulk Update Fees</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Add New Doctor</span>
+</button>
+</div>
+</div>
+<!-- Filter Controls -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 pt-2">
+<!-- Search Doctor -->
+<div class="lg:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-low border-0 text-on-surface placeholder:text-outline text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="Search doctor by name, specialty, or NMC ID..." type="text">
+</div>
+<!-- Department Dropdown -->
+<div class="lg:col-span-3 relative">
+<select class="w-full h-10 px-3 pr-8 rounded-xl bg-surface-container-low border-0 text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary/40 appearance-none">
+<option value="">All Clinical Departments (16)</option>
+<option selected="" value="cardio">Cardiology</option>
+<option value="ortho">Orthopaedics</option>
+<option value="neuro">Neurology</option>
+<option value="genmed">General Medicine</option>
+<option value="pedia">Pediatrics &amp; Neonatology</option>
+<option value="onco">Oncology &amp; Surgical Oncology</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+<!-- Status Dropdown -->
+<div class="lg:col-span-2 relative">
+<select class="w-full h-10 px-3 pr-8 rounded-xl bg-surface-container-low border-0 text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary/40 appearance-none">
+<option value="all">Status: All (48)</option>
+<option selected="" value="active">Active On Roster</option>
+<option value="oncall">On Call Emergency</option>
+<option value="onleave">On Leave</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+<!-- Quick Clear / Secondary Filter -->
+<div class="lg:col-span-2 flex items-center justify-end">
+<button class="w-full h-10 flex items-center justify-center gap-1.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Advanced (3)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 border-b border-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 lg:px-6 font-bold">Doctor Information</th>
+<th class="py-3 px-4 font-bold">Department &amp; Specialty</th>
+<th class="py-3 px-4 font-bold">Chamber &amp; OPD Timings</th>
+<th class="py-3 px-4 font-bold">Affiliation Status</th>
+<th class="py-3 px-4 font-bold">Inline OPD Fee (₹)</th>
+<th class="py-3 px-4 text-center font-bold">PM-JAY Cashless</th>
+<th class="py-3 px-4 text-right pr-6 font-bold">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- ROW 1: Dr. Rajeshwari K. -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 lg:px-6">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-surface-container shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Indian female senior cardiologist in white medical lab coat with stethoscope around neck in modern clean hospital setting, warm clinical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2qbu8UUnNxbBVw8PEeFYrsqXb2ItlYvOPOelt0ECqdK8HFmqWoGsr6Ux97w6jJCyp-9V9spp8F4_Fe6YjEG0GPWKXsRpIiDctWHgtFnHQSBx_YjwSaLg10k-hQWlFTfcbqr51myzn0kpL9DHKMBtXPV4JdIX2RcQDWrQUfRdlkfcGzasC5uKajnGI9C3zcTmsJP34OSUEojytYkm4jPvepJJy6rg3E9EMjb16FoH9OXGjqRdWRV1C">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dr. Rajeshwari K.</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="ABDM Verified Medical Practitioner">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">MBBS, MD (Med), DM (Cardio)</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">NMC ID: KMC-49281-BLR</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container font-label-md text-label-md text-primary font-bold">Cardiology</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Interventional Cardiology</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">OPD Room 214</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon – Fri: 09:00 AM – 01:30 PM</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">Chamber Open Now</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/15 text-primary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Full-Time Empanelled
+                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="absolute left-2.5 font-bold text-secondary text-sm">₹</span>
+<input class="w-24 h-9 pl-6 pr-2 rounded-lg bg-surface-container-low border border-surface-container font-label-lg text-label-lg font-extrabold text-secondary focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-white" type="text" value="800">
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface-variant flex items-center justify-center transition-colors" title="Quick Save Fee" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-1">₹600 Hosp / ₹200 Doc split</span>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Empanelled ✓
+                </span>
+</td>
+<td class="py-4 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Edit Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Doctor Options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Dr. Arvind Natarajan -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 lg:px-6">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-surface-container shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Indian male senior orthopaedic surgeon doctor with glasses wearing surgical scrubs and white coat in modern hospital corridor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYdmP3re2UkGBnnN0HK8RkAuiPnyEgiBMDerS0rDINIr-gK4xuvHMwIrjJyT3sqgDxXWOfgAlycUarQHhiqvZTbnU6CnhK7Qh_aXOgaQM5VDA8db7BimFhta6u_caSd7xZWBl283pSaNHijXDSlJ0MjczUGNnc0b6SnxFgBa7DS_gslYRXT6ExdqCM6iysZjpb9S1UByp0Y2Mc6bcJjq823dj1izcylE6vcHH-zLRAe1QyFgKWmsPb">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dr. Arvind Natarajan</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="ABDM Verified Medical Practitioner">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">MBBS, MS (Ortho), MCh (UK)</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">NMC ID: KMC-31802-BLR</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container font-label-md text-label-md text-primary font-bold">Orthopaedics</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Joint Replacement &amp; Robotic Arthroplasty</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">OPD Room 108</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon – Sat: 10:00 AM – 02:00 PM</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">Chamber Open Now</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/15 text-primary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Full-Time Empanelled
+                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="absolute left-2.5 font-bold text-secondary text-sm">₹</span>
+<input class="w-24 h-9 pl-6 pr-2 rounded-lg bg-surface-container-low border border-surface-container font-label-lg text-label-lg font-extrabold text-secondary focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-white" type="text" value="750">
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface-variant flex items-center justify-center transition-colors" title="Quick Save Fee" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-1">₹550 Hosp / ₹200 Doc split</span>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Empanelled ✓
+                </span>
+</td>
+<td class="py-4 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Edit Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Doctor Options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Dr. Meenakshi Sundaram -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 lg:px-6">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-surface-container shadow-xs">
+<img class="w-full h-full object-cover" data-alt="South Indian female chief neurologist doctor with neat hair tie and stethoscope smiling warmly in neurology consultation clinic office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2aPQUl7UVrWzvudo3Ki6_vfEjlGVtM6RLwWXvE5o_7yto_rN3jTN0otT7QuAQRllDARkwn2axoP19Ch1FAe7NST3M2-m5fAJIaL2dGmbqsE9f3_wssp598RapyR9YeWtNKMBwfa2ySdPNdr2fKCw5q4CU1gKPAJ6xsPDlezRETkY4BmJcs5Y4Ud8rQbaqSAIoehIQwvEjeEQqP0HA_OT8AyeSDnQ1GCHqKUOckRTpA-NX1T3TP35-">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-secondary-container ring-2 ring-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dr. Meenakshi Sundaram</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="ABDM Verified Medical Practitioner">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">MBBS, MD, DM (Neurology), FAAN</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">NMC ID: KMC-15940-BLR</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container font-label-md text-label-md text-primary font-bold">Neurology</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Chief Neurologist &amp; Stroke Care</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">OPD Room 302</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Tue, Thu, Sat: 02:00 PM – 06:00 PM</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Shift Starts at 2 PM</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Visiting Consultant
+                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="absolute left-2.5 font-bold text-secondary text-sm">₹</span>
+<input class="w-24 h-9 pl-6 pr-2 rounded-lg bg-surface-container-low border border-surface-container font-label-lg text-label-lg font-extrabold text-secondary focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-white" type="text" value="1,200">
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface-variant flex items-center justify-center transition-colors" title="Quick Save Fee" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-1">₹800 Hosp / ₹400 Doc split</span>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Empanelled ✓
+                </span>
+</td>
+<td class="py-4 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Edit Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Doctor Options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Dr. Farhan Akhtar -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 lg:px-6">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-surface-container shadow-xs">
+<div class="w-full h-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-base">FA</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dr. Farhan Akhtar</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="ABDM Verified Medical Practitioner">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">MBBS, MD (General Medicine)</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">NMC ID: KMC-62410-BLR</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container font-label-md text-label-md text-primary font-bold">General Medicine</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Internal Medicine &amp; Diabetes Care</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">OPD Room 102</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon – Sat: 08:30 AM – 02:00 PM</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">Chamber Open Now</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/15 text-primary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Full-Time Empanelled
+                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="absolute left-2.5 font-bold text-secondary text-sm">₹</span>
+<input class="w-24 h-9 pl-6 pr-2 rounded-lg bg-surface-container-low border border-surface-container font-label-lg text-label-lg font-extrabold text-secondary focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-white" type="text" value="500">
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface-variant flex items-center justify-center transition-colors" title="Quick Save Fee" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-1">₹350 Hosp / ₹150 Doc split</span>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Empanelled ✓
+                </span>
+</td>
+<td class="py-4 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Edit Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Doctor Options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Dr. Shalini Hegde -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 lg:px-6">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-surface-container shadow-xs">
+<div class="w-full h-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-base">SH</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dr. Shalini Hegde</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="ABDM Verified Medical Practitioner">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">MBBS, DCH, DNB (Pediatrics)</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">NMC ID: KMC-58721-BLR</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container font-label-md text-label-md text-primary font-bold">Pediatrics</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Pediatrics &amp; Neonatal Care</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">OPD Room 210</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon – Sat: 09:30 AM – 03:00 PM</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">Chamber Open Now</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/15 text-primary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Full-Time Empanelled
+                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="absolute left-2.5 font-bold text-secondary text-sm">₹</span>
+<input class="w-24 h-9 pl-6 pr-2 rounded-lg bg-surface-container-low border border-surface-container font-label-lg text-label-lg font-extrabold text-secondary focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-white" type="text" value="650">
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface-variant flex items-center justify-center transition-colors" title="Quick Save Fee" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-1">₹450 Hosp / ₹200 Doc split</span>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Empanelled ✓
+                </span>
+</td>
+<td class="py-4 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Edit Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Doctor Options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 6: Dr. Vikramaditya Rao -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 lg:px-6">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-surface-container shadow-xs">
+<div class="w-full h-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-base">VR</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-outline ring-2 ring-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dr. Vikramaditya Rao</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="ABDM Verified Medical Practitioner">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">MBBS, MS, MCh (Surgical Oncology)</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">NMC ID: KMC-23094-BLR</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-surface-container font-label-md text-label-md text-primary font-bold">Oncology</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Surgical Oncology &amp; Robotic Resection</span>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">OPD Room 405</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon, Wed, Fri: 03:00 PM – 07:00 PM</div>
+<span class="inline-block mt-0.5 px-2 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">In OT Complex (Surgery)</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Visiting Consultant
+                </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="absolute left-2.5 font-bold text-secondary text-sm">₹</span>
+<input class="w-24 h-9 pl-6 pr-2 rounded-lg bg-surface-container-low border border-surface-container font-label-lg text-label-lg font-extrabold text-secondary focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-white" type="text" value="1,500">
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface-variant flex items-center justify-center transition-colors" title="Quick Save Fee" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-1">₹1,000 Hosp / ₹500 Doc split</span>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Empanelled ✓
+                </span>
+</td>
+<td class="py-4 px-4 text-right pr-6">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Edit Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" title="Doctor Options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Bottom Pagination Bar -->
+<div class="p-4 lg:p-5 border-t border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface-container-lowest">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Showing <strong class="text-on-surface font-semibold">6</strong> of <strong class="text-on-surface font-semibold">48</strong> empanelled clinicians</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Filtered by Cardiology, Ortho, Neuro, GenMed, Pedia, Onco</span>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-auto">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center disabled:opacity-40 transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">1</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">3</button>
+<span class="text-on-surface-variant font-label-sm text-label-sm">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">8</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

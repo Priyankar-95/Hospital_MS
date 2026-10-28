@@ -1,0 +1,21 @@
+{
+    "name":  "hospital-booking-frontend",
+    "version":  "1.0.0",
+    "description":  "Tailwind build for the Liberty Health Care frontend",
+    "directories":  {
+                        "doc":  "docs"
+                    },
+    "scripts":  {
+                    "build:css":  "tailwindcss -c frontend/shared/tailwind.config.js -i frontend/shared/tailwind-input.css -o frontend/shared/tailwind.css --minify",
+                    "watch:css":  "tailwindcss -c frontend/shared/tailwind.config.js -i frontend/shared/tailwind-input.css -o frontend/shared/tailwind.css --watch"
+                },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "type":  "commonjs",
+    "devDependencies":  {
+                            "tailwindcss":  "^3.4.17"
+                        }
+}

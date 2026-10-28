@@ -1,0 +1,15 @@
+{
+    "name": "liberty/hospital-booking",
+    "type": "project",
+    "authors": [
+        {
+            "name": "PriynakarMondal",
+            "email": "mpriyankar04@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.7",
+        "phpmailer/phpmailer": "^7.1",
+        "dompdf/dompdf": "^3.1"
+    }
+}

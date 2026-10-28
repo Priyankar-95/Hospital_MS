@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appointments - Liberty Health Care</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/shared/tailwind.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="app-main">
+    <section class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h1 class="font-display text-headline-lg-mobile sm:text-headline-lg">Appointments</h1>
+          <p class="mt-1 text-body-md text-on-surface-variant" id="day-title">Your bookings, day by day.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" id="prev-day" class="btn-outline btn-sm" aria-label="Previous day"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">chevron_left</span></button>
+          <label class="sr-only" for="day-input">Date</label>
+          <input type="date" id="day-input" class="field-input !w-auto">
+          <button type="button" id="next-day" class="btn-outline btn-sm" aria-label="Next day"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">chevron_right</span></button>
+          <button type="button" id="today-btn" class="btn-outline btn-sm">Today</button>
+          <a id="pdf-link" href="#" class="btn-primary btn-sm"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">picture_as_pdf</span>Daily PDF</a>
+        </div>
+      </div>
+
+      <div id="strip" class="mt-6 flex gap-2 overflow-x-auto pb-1" aria-label="Days with bookings"></div>
+      <div id="summary" class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4"></div>
+      <div id="note" class="mt-4" hidden></div>
+      <div id="list" class="mt-6 space-y-4" aria-live="polite" aria-busy="true"></div>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/frontend/doctor/appointments.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doctor registration - Liberty Health Care</title>
+  <meta name="description" content="Register your private chamber to receive appointments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/shared/tailwind.css">
+</head>
+<body class="bg-[radial-gradient(60rem_30rem_at_50%_-10%,#dff4f2,transparent)]" data-auth-mode="register" data-auth-group="DOCTOR">
+  <header class="mx-auto flex w-full max-w-7xl items-center px-4 py-5 sm:px-6">
+    <a href="/frontend/patient/index.html" class="flex items-center gap-2.5" aria-label="Liberty Health Care home">
+      <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-container text-on-primary shadow-sm"><span class="material-symbols-outlined text-2xl" aria-hidden="true">local_hospital</span></span>
+      <span class="font-display text-headline-sm font-bold tracking-tight">Liberty Health Care</span>
+    </a>
+  </header>
+  <main class="mx-auto w-full max-w-2xl flex-1 px-4 pt-10 text-center sm:pt-20">
+    <h1 class="font-display text-display-lg-mobile sm:text-display-lg">Register your practice</h1>
+    <p class="mx-auto mt-4 max-w-md text-body-lg text-on-surface-variant">Reach patients in your district. A Branch Admin verifies your credentials before you go live.</p>
+    <noscript><p class="mt-6 text-error">Please enable JavaScript to continue.</p></noscript>
+  </main>
+  <script type="module" src="/frontend/shared/auth-page.js"></script>
+</body>
+</html>

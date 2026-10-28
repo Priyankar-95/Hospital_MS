@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liberty Health Care - Find a doctor and book an appointment</title>
+  <meta name="description" content="Compare hospital and private-chamber doctors, see fees and the next free slot, and book in minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/shared/tailwind.css">
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main id="app-main">
+    <!-- Hero: greeting, search, location -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-background">
+      <svg class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-primary/5" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+        <path d="M100 20 C120 60 140 80 180 100 C140 120 120 140 100 180 C80 140 60 120 20 100 C60 80 80 60 100 20 Z" opacity="0.08"/>
+        <path d="M100 45 C115 75 125 85 155 100 C125 115 115 125 100 155 C85 125 75 115 45 100 C75 85 85 75 100 45 Z" opacity="0.12"/>
+        <circle cx="100" cy="100" r="22" opacity="0.15"/>
+      </svg>
+      <div class="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 sm:py-12">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="mb-3"><span class="badge badge-info">Doctors &amp; hospitals, one place</span></p>
+            <h1 id="hero-title" class="font-display text-display-lg-mobile sm:text-display-lg">Find the right doctor and book in minutes</h1>
+            <p id="hero-sub" class="mt-3 max-w-2xl text-body-lg text-on-surface-variant">Compare fees, facilities and the next free slot for hospital and private-chamber doctors, then pay now or at the visit.</p>
+          </div>
+          <div class="flex items-center gap-3 rounded-2xl bg-surface-container-lowest px-4 py-3 shadow-card" id="place-card" hidden>
+            <span class="material-symbols-outlined text-secondary" aria-hidden="true">near_me</span>
+            <div class="leading-tight"><p class="text-label-sm uppercase text-on-surface-variant">Showing doctors in</p><p id="place-name" class="font-display text-label-lg"></p></div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2" id="common-searches" hidden>
+          <span class="text-label-sm font-semibold uppercase text-on-surface-variant">Common searches:</span>
+        </div>
+        <div id="hero-actions" class="flex flex-wrap gap-3">
+          <a id="hero-signup" href="/frontend/shared/register.html" data-auth="register" class="btn-outline btn-sm">Create a free account</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works (right under the hero so a first-time visitor sees it) -->
+    <section id="how" class="mx-auto max-w-7xl px-4 pb-2 pt-2 sm:px-6" aria-labelledby="how-title">
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-fixed/50 via-surface-container-lowest to-secondary-fixed/40 p-4 shadow-card ring-1 ring-outline-variant/40 sm:p-5">
+        <div class="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+          <div class="flex items-center gap-3">
+            <h2 id="how-title" class="font-display text-headline-sm font-bold sm:text-headline-md">How it works</h2>
+            <span class="badge badge-info">3 easy steps</span>
+          </div>
+          <p class="text-body-sm text-on-surface-variant">No phone calls, no waiting in line.</p>
+        </div>
+        <ol class="grid gap-3 md:grid-cols-3">
+          <li class="group flex items-start gap-3.5 rounded-xl bg-surface-container-lowest p-3.5 shadow-sm ring-1 ring-outline-variant/40 transition duration-300 hover:-translate-y-0.5 hover:shadow-pop">
+            <span class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-container to-primary text-on-primary shadow-md transition group-hover:scale-105">
+              <span class="material-symbols-outlined text-2xl" aria-hidden="true">search</span>
+              <span class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-secondary-container font-display text-label-sm font-extrabold text-on-secondary-container ring-2 ring-white">1</span>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-label-lg font-bold">Find a doctor</h3>
+              <p class="mt-0.5 text-body-sm text-on-surface-variant">Pick your problem or specialty and place, then compare doctors side by side.</p>
+            </div>
+          </li>
+          <li class="group flex items-start gap-3.5 rounded-xl bg-surface-container-lowest p-3.5 shadow-sm ring-1 ring-outline-variant/40 transition duration-300 hover:-translate-y-0.5 hover:shadow-pop">
+            <span class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-secondary-container to-secondary text-white shadow-md transition group-hover:scale-105">
+              <span class="material-symbols-outlined text-2xl" aria-hidden="true">event_available</span>
+              <span class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary-container font-display text-label-sm font-extrabold text-on-primary ring-2 ring-white">2</span>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-label-lg font-bold">Pick a time</h3>
+              <p class="mt-0.5 text-body-sm text-on-surface-variant">See which days still have room and choose what suits you. Log in only when you book.</p>
+            </div>
+          </li>
+          <li class="group flex items-start gap-3.5 rounded-xl bg-surface-container-lowest p-3.5 shadow-sm ring-1 ring-outline-variant/40 transition duration-300 hover:-translate-y-0.5 hover:shadow-pop">
+            <span class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-tertiary-container to-tertiary text-on-tertiary shadow-md transition group-hover:scale-105">
+              <span class="material-symbols-outlined text-2xl" aria-hidden="true">payments</span>
+              <span class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-secondary-container font-display text-label-sm font-extrabold text-on-secondary-container ring-2 ring-white">3</span>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-label-lg font-bold">Pay now or at the visit</h3>
+              <p class="mt-0.5 text-body-sm text-on-surface-variant">Pay online or at the clinic. Cancel up to 24 hours before for a full refund.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Two ways in -->
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-tertiary-container/15 via-surface-container-low to-surface-container-lowest p-6 shadow-card transition hover:shadow-pop">
+          <div class="pointer-events-none absolute -bottom-8 -right-8 h-44 w-44 rounded-full bg-primary/10 blur-2xl"></div>
+          <span class="material-symbols-outlined pointer-events-none absolute right-6 top-6 text-8xl text-primary opacity-20" aria-hidden="true">stethoscope</span>
+          <div class="relative">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1 rounded-full bg-tertiary px-3 py-1 text-label-sm font-semibold text-on-tertiary"><span class="material-symbols-outlined text-sm" aria-hidden="true">checklist</span>Not sure what is wrong?</span>
+              <span class="inline-flex items-center gap-1 rounded-full bg-surface-container-highest px-2.5 py-1 text-label-sm">Free to use</span>
+            </div>
+            <h2 class="mt-3 font-display text-headline-lg-mobile font-bold sm:pr-24 sm:text-headline-lg">Know your problem? Find the right department</h2>
+            <p class="mt-2 max-w-md text-body-md text-on-surface-variant">Pick what is troubling you and we suggest the department to see. It is a simple guide to help you choose, not a diagnosis.</p>
+            <ul class="my-3 grid max-w-sm grid-cols-2 gap-2 text-label-sm text-on-surface-variant">
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-tertiary" aria-hidden="true">check_circle</span>Pick several problems</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-tertiary" aria-hidden="true">check_circle</span>Best match first</li>
+            </ul>
+          </div>
+          <div class="relative mt-3"><a href="#symptoms" class="btn-primary">Choose your problem <span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_downward</span></a></div>
+        </div>
+
+        <div class="relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-fixed/40 via-surface-container-low to-surface-container-lowest p-6 shadow-card transition hover:shadow-pop">
+          <div class="pointer-events-none absolute -bottom-8 -right-8 h-44 w-44 rounded-full bg-secondary-container/20 blur-2xl"></div>
+          <span class="material-symbols-outlined pointer-events-none absolute right-6 top-6 text-8xl text-secondary opacity-20" aria-hidden="true">clinical_notes</span>
+          <div class="relative">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1 rounded-full bg-secondary px-3 py-1 text-label-sm font-semibold text-on-secondary"><span class="material-symbols-outlined text-sm" aria-hidden="true">event_available</span>Book a time</span>
+              <span class="inline-flex items-center gap-1 rounded-full bg-surface-container-highest px-2.5 py-1 text-label-sm">Hospital &amp; private doctors</span>
+            </div>
+            <h2 class="mt-3 font-display text-headline-lg-mobile font-bold sm:pr-24 sm:text-headline-lg">Know your condition? Browse specialists</h2>
+            <p class="mt-2 max-w-md text-body-md text-on-surface-variant">Choose a specialty, filter by state and district, compare fees and next free times side by side, and book.</p>
+            <ul class="my-3 grid max-w-sm grid-cols-2 gap-2 text-label-sm text-on-surface-variant">
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-secondary" aria-hidden="true">check_circle</span>Confirmed times</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base text-secondary" aria-hidden="true">check_circle</span>Pay now or at the visit</li>
+            </ul>
+          </div>
+          <div class="relative mt-3"><a id="browse-link" href="/frontend/patient/doctors.html" class="inline-flex items-center gap-2 rounded-xl bg-secondary px-6 py-3 font-display text-label-lg font-semibold text-on-secondary shadow-sm transition hover:bg-on-secondary-container">Browse specialists <span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_forward</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Symptoms -> department -->
+    <section id="symptoms" class="mx-auto max-w-7xl scroll-mt-24 px-4 pt-10 sm:px-6" aria-labelledby="symptoms-title">
+      <div class="card p-6 sm:p-8">
+        <h2 id="symptoms-title" class="font-display text-headline-md">What is troubling you?</h2>
+        <p class="mt-1 text-body-md text-on-surface-variant">Pick one or more problems and we will suggest the department to see. This is a simple guide, not a diagnosis.</p>
+        <div class="relative mt-5 max-w-md">
+          <label class="sr-only" for="symptom-filter">Search problems</label>
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true">search</span>
+          <input id="symptom-filter" type="search" placeholder="Search, e.g. headache, fever" class="field-input pl-11" autocomplete="off">
+        </div>
+        <div id="symptom-chips" class="mt-4 flex max-h-[2.75rem] flex-wrap gap-2 overflow-hidden" role="group" aria-label="Problems" aria-live="polite">
+          <div class="h-9 w-28 animate-pulse rounded-full bg-surface-container"></div><div class="h-9 w-36 animate-pulse rounded-full bg-surface-container"></div><div class="h-9 w-24 animate-pulse rounded-full bg-surface-container"></div>
+        </div>
+        <button type="button" id="symptom-more" class="mt-3 flex items-center gap-1 text-label-md font-semibold text-primary hover:text-primary-container" aria-expanded="false" hidden></button>
+        <div id="recommend" class="mt-6" hidden aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Top specialties -->
+    <section id="specialties" class="mx-auto max-w-7xl scroll-mt-24 px-4 pt-12 sm:px-6">
+      <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 class="font-display text-headline-md font-bold">Top medical specialties</h2>
+          <p id="specialty-sub" class="mt-1 text-body-sm text-on-surface-variant">Pick the department that matches your problem.</p>
+        </div>
+        <button type="button" id="specialty-more" class="flex items-center gap-1 text-label-md font-semibold text-primary hover:text-primary-container" hidden></button>
+      </div>
+      <div id="specialty-grid" class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" aria-live="polite">
+        <div class="h-32 animate-pulse rounded-2xl bg-surface-container"></div><div class="h-32 animate-pulse rounded-2xl bg-surface-container"></div>
+        <div class="h-32 animate-pulse rounded-2xl bg-surface-container"></div><div class="h-32 animate-pulse rounded-2xl bg-surface-container"></div>
+      </div>
+    </section>
+
+    <!-- Verified hospitals -->
+    <section id="hospitals" class="mx-auto max-w-7xl scroll-mt-24 px-4 pt-12 sm:px-6" hidden>
+      <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2"><span class="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-primary"></span><h2 class="font-display text-headline-md font-bold">Verified hospitals</h2></div>
+          <p id="hospital-sub" class="mt-1 text-body-sm text-on-surface-variant"></p>
+        </div>
+        <a id="hospital-all" href="/frontend/patient/doctors.html?type=HOSPITAL" class="flex items-center gap-1 text-label-md font-semibold text-primary hover:text-primary-container">All hospital doctors <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span></a>
+      </div>
+      <div id="hospital-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <!-- Emergency and booking promises -->
+    <section class="mx-auto max-w-7xl px-4 pt-12 sm:px-6">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <div class="flex flex-col items-start justify-between gap-5 rounded-2xl bg-gradient-to-r from-error-container via-surface-container to-surface-container-low p-6 shadow-card md:flex-row md:items-center lg:col-span-2">
+          <div class="flex items-start gap-3.5">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-error text-on-error shadow-sm"><span class="material-symbols-outlined text-2xl" aria-hidden="true">emergency</span></span>
+            <div>
+              <h2 class="font-display text-headline-sm font-extrabold text-on-error-container">Emergency? Do not wait for an appointment</h2>
+              <p class="mt-1 max-w-lg text-body-sm text-on-surface-variant">For a serious injury, chest pain, a stroke, heavy bleeding or breathing trouble, call an ambulance or go straight to the nearest hospital emergency room.</p>
+            </div>
+          </div>
+          <div class="flex w-full shrink-0 flex-wrap gap-2 md:w-auto">
+            <a href="tel:108" class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-error px-5 py-3 font-display text-label-lg font-bold text-on-error shadow-sm transition hover:bg-on-error-container md:flex-initial"><span class="material-symbols-outlined text-xl" aria-hidden="true">call</span>Call 108 Ambulance</a>
+            <a id="er-link" href="/frontend/patient/doctors.html?type=HOSPITAL" class="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-surface-container-lowest px-4 py-3 font-display text-label-md font-semibold text-on-surface shadow-sm transition hover:bg-surface-container md:flex-initial"><span class="material-symbols-outlined text-lg text-error" aria-hidden="true">local_hotel</span>Find a hospital</a>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-card">
+          <div>
+            <span class="inline-flex items-center gap-1 text-label-sm font-bold uppercase tracking-wider text-secondary"><span class="material-symbols-outlined text-base" aria-hidden="true">shield_with_heart</span>Our promise</span>
+            <h3 class="mt-2 font-display text-headline-sm font-bold">Book with confidence</h3>
+            <ul class="mt-3 space-y-2 text-body-sm text-on-surface-variant">
+              <li class="flex gap-2"><span class="material-symbols-outlined text-base text-tertiary" aria-hidden="true">verified</span>Every doctor and hospital is checked before they are listed.</li>
+              <li class="flex gap-2"><span class="material-symbols-outlined text-base text-tertiary" aria-hidden="true">event_busy</span>Cancel up to 24 hours before for free.</li>
+              <li class="flex gap-2"><span class="material-symbols-outlined text-base text-tertiary" aria-hidden="true">currency_rupee</span>Paid online? A full refund reaches you within 48 hours.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live counts -->
+    <section class="mx-auto max-w-7xl px-4 pt-6 sm:px-6" aria-label="Platform at a glance">
+      <div class="rounded-2xl bg-surface-container-lowest p-6 shadow-card">
+        <div id="stats" class="grid grid-cols-2 gap-6 text-center md:grid-cols-4"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="app-footer"></div>
+  <script type="module" src="/frontend/patient/home.js"></script>
+</body>
+</html>
